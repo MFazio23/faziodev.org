@@ -2,7 +2,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
         "namespace": "android_app",
-        "package_name": "org.faziodev.mkecodecamp.giveaways",
-        "sha256_cert_fingerprints": ["F5:DA:BD:6D:FB:B2:02:0C:1B:B6:AA:09:17:53:3F:18:B2:21:AF:E4:19:07:B2:0B:55:2B:CD:B7:CA:48:E7:02"]
+        "package_name": "com.bcycle.alpha",
+        "sha256_cert_fingerprints": ["1D:DB:54:6F:DE:A4:A6:0D:75:AE:4B:61:FD:AE:37:12:9F:49:DD:C9:04:BA:53:6B:69:E4:3E:B1:6B:EA:67:66"]
     }
 }]
