@@ -2,12 +2,88 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css" />
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css" />
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
-<body>
-    <a href="https://www.faziodev.org/bcycle?location=SecureLink">Secure Link</a><br />
-    <a href="http://www.faziodev.org/bcycle?location=NonSecureLink">Non-Secure Link</a><br />
-    <a href="faziodev://bcycle?location=CustomProtocol">Custom protocol</a><br />
-</body>
+<body class="ms-Fabric">
+    <span class="ms-font-su">BCycle Mobile App Links</span><br />
 
+    <ul class="ms-List">
+        <span class="ms-font-xl">Empty Links</span><br />
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink">
+            <span class="ms-ListItem-primaryText">Secure Default Link</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink</span>
+        </a>
+        <a class="ms-ListItem" href="http://www.bcycle.com/applink">
+            <span class="ms-ListItem-primaryText">Non-secure Default Link</span>
+            <span class="ms-ListItem-tertiaryText">http://www.bcycle.com/applink</span>
+        </a>
+        <a class="ms-ListItem" href="bcycle://somepath">
+            <span class="ms-ListItem-primaryText">Custom Protocol</span>
+            <span class="ms-ListItem-tertiaryText">bcycle://somepath</span>
+        </a>
+
+        <span class="ms-font-xl">System-only links</span><br />
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_madison">
+            <span class="ms-ListItem-primaryText">Madison link</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_madison</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_thiswontwork">
+            <span class="ms-ListItem-primaryText">Invalid link</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_thiswontwork</span>
+        </a>
+
+        <span class="ms-font-xl">Station-only links</span><br />
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?station_id=bcycle_madison_1880">
+            <span class="ms-ListItem-primaryText">Madison - MLK & Main St. link</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?station_id=bcycle_madison_1880</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?station_id=1880">
+            <span class="ms-ListItem-primaryText">Madison - Valid station ID but no system</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?station_id=1880</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?station_id=bcycle_madison_978154">
+            <span class="ms-ListItem-primaryText">Madison - Invalid station ID for valid system</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?station_id=bcycle_madison_978154</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?station_id=789846841">
+            <span class="ms-ListItem-primaryText">Invalid station ID</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?station_id=789846841</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?station_id=bcycle_notarealprogram_789846841">
+            <span class="ms-ListItem-primaryText">Invalid system and station ID</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?station_id=bcycle_notarealprogram_789846841</span>
+        </a>
+
+        <span class="ms-font-xl">System and Station links</span><br />
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=bcycle_madison_1903">
+            <span class="ms-ListItem-primaryText">Madison - Olbrich Gardens</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=bcycle_madison_1903</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=1912">
+            <span class="ms-ListItem-primaryText">Madison - S. Few & Williamson (Kiosk ID only)</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=1912</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=bcycle_pony_bike_tulsa_4105">
+            <span class="ms-ListItem-primaryText">Madison/Tulsa - System mismatch</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=bcycle_pony_bike_tulsa_4105</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=bcycle_madison_8978484841">
+            <span class="ms-ListItem-primaryText">Madison - Invalid station ID</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=bcycle_madison_8978484841</span>
+        </a>
+        <a class="ms-ListItem" href="https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=7898135454">
+            <span class="ms-ListItem-primaryText">Madison - Invalid kiosk ID</span>
+            <span class="ms-ListItem-tertiaryText">https://www.bcycle.com/applink?system_id=bcycle_madison&station_id=7898135454</span>
+        </a>
+    </ul>
+</body>
 </html>
